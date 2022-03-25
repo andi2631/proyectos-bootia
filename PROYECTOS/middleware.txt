@@ -1,0 +1,47 @@
+MIDDLEWARE -->  Es el codigo que corre entre 2 componentes
+
+REDUX-SAGA: Se encarga de manejar los side effects   (usando generators):  -Easy to manage
+                                                    -More efficient to execute
+                                                    -Easier to test
+                                                    -Better at handling failures
+
+Side effects: Data fetching (HTTP CALL)
+Accesing browser cache
+Mutations
+Querying DOM
+Printing/Logging
+etc...
+
+
+REDUXMIDDLEWARE --> Está entre dos componentes de software:  action que se va a despachar y el siguiente es el action, antes de que llegue al reducer. 
+Antes de llegar al reducer, puede realizar los side effects, como comunicarse con  una API. Luego va al reducer, que evalúa si necesita o no actualizar un state.
+
+Dispatch Actions/ Access to full redux application state/ Start, stop or cancelled using redux actions  
+
+
+
+REDUX ---> createStore, compose, applyMiddleware
+STORE : REDUCER :Le pasamos el resultado de todos los reducers combinados y un estado inicial. Los tres argumentos que toma el createStore son: el reducir, el estado inicial y el enhacner. Para aplicar muchos enhancers se puede usar la función compose.
+
+A store enhancer, ahem... "enhances" or adds some additional capabilities to the store. It could change how reducers process data, or how dispatch works.
+
+Un enhance muy utilizado es applyMiddleWare. Me permite enviar una colección de middlewares y se va a registrar en nuestro store.
+
+A LA HORA DE CONFIGURAR REDUX-SAGA: createStore - compose - applyMiddleWare
+
+Los sagas "yieldean efectos" (takeEvery, takeLatest, put, call)
+
+TakeEvery, toma 2 argumentos: el primero es el patrón (storing / array / funcionarios), que por lo general es un action type.
+
+Si el patrón coincide se lo pasa a la saga.
+
+El saga es el segundo parámetro, que es una function generador, el cual se va a ejecutar.
+
+
+Put: es lo mismo que dispatch ("despacha actions")
+
+Call: El effect call, que puede ser tanto una función normal, como una función generator, que retorna un promesa o un valor normal y lo que hace es ejecutarla
+
+
+Functip
+
