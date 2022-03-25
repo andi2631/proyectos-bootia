@@ -1,0 +1,45 @@
+APLICATION PROGRAMMING INTERFACE
+
+Funciones, métodos que ofrece una librería para ser utilizada por otro software
+
+Web service es cuando podemos conectarnos a otro servicio via web
+
+Para acceder al servicio hay que enviar una peticion estructurada
+
+Se utiliza json Y XML
+
+Google maps API ejemplo
+
+-------------------------------------------
+
+REST = Representational State Transfer
+
+Trasladar datos de un dominio dentro de otro con JSON. Puedo consumir algo hecho en Python en un proyecto de JAVA
+
+Puede ser diseñada en cualquier lenguaje
+
+REST describe como deben ponerse a disposicion los recursos
+
+La api debe responder a los request de HTTP:
+ GET, POST, PUT, PATCH, DELETE
+
+Cada API, tiene sus propias reglas, métodos y estructuras
+
+ENDPOINTS:
+
+Una rest API cuenta con ENDPOINTS (o Urls) para hacer operaciones CRUD
+
+- Listar todos los clientes     GET /clientes
+- Obtener un solo cliente   GET /clientes/"aca va su id, por ejemplo: 10"
+- Crear un nuevo cliente    POST /clientes
+- Editar un cliente     PUT/clientes/"Id del cliente"
+- Borrar un cliente     DELETE /clientes/"Id del cliente"
+
+--------------------------------------------------------------------------------
+
+Consultar API'S en react:
+
+- Fetch API Y Ajax (nativo de js)
+- Axios
+- JQuery Ajax
+
